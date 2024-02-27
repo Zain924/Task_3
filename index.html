@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
+            margin-top: 50px;
             padding: 0;
             display: flex;
             justify-content: center;
@@ -20,13 +21,22 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 400px;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         label {
             font-weight: bold;
-            margin-bottom: 5px;
         }
 
         input[type="text"],
@@ -36,7 +46,16 @@
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 20px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            padding: 13px;
+            border: 2px solid #0D6EFD;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px lightgray;
         }
 
         button[type="submit"] {
@@ -46,45 +65,57 @@
             border-radius: 5px;
             padding: 10px 20px;
             cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: auto; /* Adjusted width */
         }
+
 
         button[type="submit"]:hover {
             background-color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .form-group {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <form id="employeeForm">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required><br>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required><br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
 
-        <label for="latitude">Latitude:</label>
-        <input type="text" id="latitude" name="latitude" required><br>
+        <div class="form-group">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" name="latitude" required>
 
-        <label for="longitude">Longitude:</label>
-        <input type="text" id="longitude" name="longitude" required><br>
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" name="longitude" required>
 
-        <label for="employeeID">Employee ID:</label>
-        <input type="text" id="employeeID" name="employeeID" required><br>
+            <label for="employeeID">Employee ID:</label>
+            <input type="text" id="employeeID" name="employeeID" required>
 
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city" required><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
 
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country" required><br>
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        </div>
 
         <button type="submit">Submit</button>
     </form>
-
-    <script src="Script.js"></script>
 </body>
 </html>
