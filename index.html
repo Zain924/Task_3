@@ -1,121 +1,117 @@
+
+
+
 <!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> New Worker</title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">New Worker</div>
+    <div class="content">
+      <form id="employeeForm">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter Your First Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Your Last  Name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter Your Phone" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Lattitude</span>
+            <input type="text" id="latitude" name="latitude" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Longitude</span>
+            <input type="text" id="longitude" name="longitude" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Employee Id</span>
+            <input type="text" id="employeeID" name="employeeID" placeholder="Enter Your Id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" id="city" name="city" placeholder="Enter Your City" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Country</span>
+            <input type="text" id="country" name="country" placeholder="Enter Your Country" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Information Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            margin-top: 50px;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        form {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding-top: 20px;
-            padding-left: 30px;
-            padding-right: 30px;
-            width: 600px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .form-group {
-            width: 50%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus {
-            padding: 13px;
-            border: 2px solid #0D6EFD;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px lightgray;
-        }
-
-        button[type="submit"] {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            width: auto; /* Adjusted width */
-        }
-
-
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        @media (max-width: 600px) {
-            .form-group {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <form id="employeeForm">
-        <div class="form-group">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
+    <div class="container">
+        <form >
+            <div class="form-group">
+                <label >First Name:</label>
+                
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+                <label >Last Name:</label>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
 
-            <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" required>
-        </div>
+                <label >Email:</label>
+                
 
-        <div class="form-group">
-            <label for="latitude">Latitude:</label>
-            <input type="text" id="latitude" name="latitude" required>
+                <label >Phone Number:</label>
 
-            <label for="longitude">Longitude:</label>
-            <input type="text" id="longitude" name="longitude" required>
+            </div>
 
-            <label for="employeeID">Employee ID:</label>
-            <input type="text" id="employeeID" name="employeeID" required>
+            <div class="form-group">
+                <label >Latitude:</label>
+            
 
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" required>
+                <label >Longitude:</label>
+                
 
-            <label for="country">Country:</label>
-            <input type="text" id="country" name="country" required>
-        </div>
+                <label >Employee ID:</label>
+                
 
-        <button type="submit">Submit</button>
-    </form>
+                <label >City:</label>
+                
+
+                <label >Country:</label>
+                
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
 </body>
-</html>
+</html> -->
